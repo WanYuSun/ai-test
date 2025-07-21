@@ -1,15 +1,15 @@
 {
   "common": {
     "home": "Home",
-    "models": "AI Models",
+    "models": "Models",
     "chat": "Chat",
     "account": "Account",
     "apiManagement": "API Management",
     "news": "News",
     "pricing": "Pricing",
-    "login": "Login",
-    "register": "Free Register",
-    "logout": "Logout",
+    "login": "Sign In",
+    "register": "Sign Up Free",
+    "logout": "Sign Out",
     "save": "Save",
     "cancel": "Cancel",
     "edit": "Edit",
@@ -28,27 +28,111 @@
     "next": "Next",
     "previous": "Previous",
     "retry": "Retry",
-    "refresh": "Refresh"
+    "refresh": "Refresh",
+    "viewAll": "View All",
+    "viewMore": "View More",
+    "placeholder": "Placeholder",
+    "waitingToLoad": "Waiting to load...",
+    "imageLoadFailed": "Image failed to load",
+    "hot": "Hot",
+    "tryNow": "Try Now",
+    "participateNow": "Participate Now",
+    "readMore": "Read More",
+    "limitedTime": "Limited Time",
+    "validUntil": "Valid Until",
+    "startNow": "Start Now",
+    "selectPlan": "Select Plan",
+    "comingSoon": "Coming Soon",
+    "all": "All",
+    "image": "Image",
+    "audio": "Audio",
+    "code": "Code"
   },
   "header": {
-    "title": "AI Platform",
+    "title": "MetaPicker",
     "accountManagement": "Account Management",
     "subscriptionManagement": "Subscription Management",
     "userMenu": "User Menu"
   },
   "hero": {
-    "title": "Next-Generation AI Platform",
-    "subtitle": "Integrate world-leading AI models for powerful artificial intelligence services",
+    "badge": "New AI Experience, Now Live",
+    "title": "Intelligent AI Tool Hub",
+    "subtitle": "Integrate 15+ mainstream AI models with unified API interface, supporting multimodal conversations. One-stop AI solutions to unleash your creativity.",
     "startFree": "Start Free",
-    "learnMore": "Learn More",
-    "trustedBy": "Trusted by companies"
+    "watchDemo": "Watch Demo",
+    "platformData": "Platform Data",
+    "features": {
+      "multiModel": "15+ Mainstream AI Models",
+      "serviceProviders": "30+ Service Providers",
+      "multiModal": "Multimodal Support",
+      "realTimeChat": "Real-time Chat"
+    },
+    "stats": {
+      "activeUsers": "Active Users",
+      "apiCalls": "API Calls",
+      "supportedModels": "Supported Models"
+    }
   },
   "features": {
     "title": "Powerful Features",
+    "oneStopTitle": "One-Stop Integration",
+    "aiCapabilities": "Diverse AI Capabilities",
     "subtitle": "Complete AI solutions built for developers and enterprises",
+    "description": "We integrate the best AI models and services available, providing powerful AI capabilities through unified API interfaces, allowing you to focus on innovation rather than infrastructure",
+    "readyToExperience": "Ready to experience the power of AI?",
+    "freeTrialDescription": "Register now for 100 free credits, no credit card required, no hidden fees",
+    "moreFeatures": "More Powerful Features",
+    "moreFeaturesDescription": "In addition to core AI model integration, we provide rich auxiliary functions to help you build complete AI applications",
+    "checkApiDocs": "Check API Docs",
     "multiModel": {
-      "title": "Multi-Model Support",
-      "desc": "Integrate mainstream AI models like GPT-4, Claude, Gemini"
+      "title": "Multiple AI Models",
+      "desc": "Integrate 15+ mainstream AI models like GPT-4, Claude, Gemini to meet different scenario needs"
+    },
+    "fastResponse": {
+      "title": "Lightning Fast",
+      "desc": "Optimized API routing and intelligent load balancing ensure millisecond response times"
+    },
+    "secure": {
+      "title": "Secure & Reliable",
+      "desc": "Enterprise-grade security protection, encrypted data transmission, compliant with GDPR and other regulations"
+    },
+    "unifiedApi": {
+      "title": "Unified API",
+      "desc": "One API interface supporting all models, simplifying development and maintenance costs"
+    },
+    "multiModal": {
+      "title": "Multimodal Support",
+      "desc": "Support text, image, voice and other input/output formats"
+    },
+    "smartChat": {
+      "title": "Smart Conversations",
+      "desc": "Multi-turn conversations with context memory for more natural interactions"
+    },
+    "highlights": {
+      "voiceRecognition": {
+        "title": "Voice Recognition",
+        "desc": "Multi-language speech-to-text with 99% accuracy"
+      },
+      "imageGeneration": {
+        "title": "Image Generation",
+        "desc": "Generate high-quality images from text with multiple styles"
+      },
+      "globalDeployment": {
+        "title": "Global Deployment",
+        "desc": "Multi-region node deployment ensuring low latency for global users"
+      },
+      "dataAnalysis": {
+        "title": "Data Analytics",
+        "desc": "Detailed usage statistics and cost analysis for business decisions"
+      },
+      "teamCollaboration": {
+        "title": "Team Collaboration",
+        "desc": "Multi-user management and permission control for team collaboration"
+      },
+      "privacyProtection": {
+        "title": "Privacy Protection",
+        "desc": "Strict data privacy protection with full user data control"
+      }
     },
     "easyIntegration": {
       "title": "Easy Integration",
@@ -57,10 +141,273 @@
     "scalable": {
       "title": "Elastic Scaling",
       "desc": "Support different scale needs from personal to enterprise"
+    }
+  },
+  "news": {
+    "title": "AI Industry",
+    "highlight": "Latest News",
+    "subtitle": "Stay up-to-date with AI technology trends, product updates and industry insights",
+    "featured": "Featured Articles",
+    "latest": "Latest News",
+    "searchPlaceholder": "Search news or tags...",
+    "noResults": "No relevant news found",
+    "tryDifferentSearch": "Try different search keywords",
+    "readMore": "Read More",
+    "loadMore": "Load More News",
+    "categories": {
+      "all": "All",
+      "product": "Product Updates",
+      "tech": "Tech Reviews",
+      "industry": "Industry Analysis",
+      "company": "New Releases"
     },
-    "secure": {
-      "title": "Secure & Reliable",
-      "desc": "Enterprise-grade security, comprehensive data privacy protection"
+    "author": {
+      "editorial": "MetaPicker Editorial",
+      "tech": "Tech Team",
+      "analyst": "Industry Analyst"
+    },
+    "tabs": {
+      "news": "Industry News",
+      "promotions": "Promotions"
+    },
+    "sampleNews": {
+      "gpt4Turbo": {
+        "title": "OpenAI Releases GPT-4 Turbo: 50% Performance Boost, 3x Price Reduction",
+        "summary": "OpenAI announces GPT-4 Turbo at their latest developer conference, featuring significant cost reductions while maintaining high-quality output..."
+      },
+      "geminiPro": {
+        "title": "Google Gemini Pro Surpasses GPT-4V in Multimodal Understanding",
+        "summary": "Latest benchmarks show Google Gemini Pro excelling in image understanding and document analysis tasks..."
+      },
+      "claude3": {
+        "title": "Anthropic Claude 3 Series Models Now Fully Available with Enhanced Safety",
+        "summary": "Anthropic officially releases Claude 3 series including Haiku, Sonnet, and Opus with significant improvements in safety and helpfulness..."
+      },
+      "aiTrends": {
+        "title": "2024 AI Industry Trends: Focus on Multimodal and Edge Computing",
+        "summary": "Industry experts predict 2024 AI focus on multimodal integration and edge deployment, with cost efficiency becoming key..."
+      }
+    },
+    "samplePromotions": {
+      "openaiOffer": {
+        "title": "OpenAI New Year Special",
+        "description": "GPT-4 Turbo 20% off for limited time, plus 1000 bonus credits",
+        "discount": "20% off + 1000 credits"
+      },
+      "anthropicTrial": {
+        "title": "Anthropic Enterprise Free Trial",
+        "description": "Claude 3 Enterprise free trial for 30 days, includes all premium features",
+        "discount": "30 days free"
+      },
+      "googleStudent": {
+        "title": "Google Cloud AI Student Discount",
+        "description": "Students enjoy 50% off Gemini Pro, student verification required",
+        "discount": "50% off"
+      }
+    }
+  },
+  "pricing": {
+    "title": "Choose Your",
+    "highlight": "Pricing Plan",
+    "subtitle": "Flexible credit-based pricing, pay as you use, no hidden fees. Multiple payment methods supported with easy upgrades and downgrades.",
+    "popular": "Most Popular",
+    "paymentMethods": "Supported Payment Methods",
+    "paymentSecurity": "Secure and Reliable Payment Protection",
+    "includes": "Includes",
+    "credits": "credits",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "period": "Forever Free",
+        "description": "Perfect for individual developers",
+        "features": [
+          "100 credits/month",
+          "Basic AI model access",
+          "Community support",
+          "Standard API limits",
+          "Basic usage statistics"
+        ],
+        "limitations": ["No premium models", "Slower response", "No priority support"]
+      },
+      "basic": {
+        "name": "Basic",
+        "period": "month",
+        "description": "Perfect for small teams and startups",
+        "features": [
+          "1,000 credits/month",
+          "All AI model access",
+          "Priority response speed",
+          "Email support",
+          "Detailed usage statistics",
+          "API key management",
+          "Basic integration docs"
+        ]
+      },
+      "pro": {
+        "name": "Pro",
+        "period": "month",
+        "description": "Perfect for growing businesses",
+        "features": [
+          "5,000 credits/month",
+          "All AI model access",
+          "Highest priority response",
+          "24/7 technical support",
+          "Advanced data analytics",
+          "Team collaboration features",
+          "Custom integrations",
+          "White-label solutions"
+        ]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "period": "month",
+        "description": "Perfect for large enterprises",
+        "features": [
+          "20,000 credits/month",
+          "All AI model access",
+          "Dedicated servers",
+          "Dedicated account manager",
+          "Enterprise-grade security",
+          "SLA guarantee",
+          "SSO single sign-on",
+          "Private deployment options",
+          "Custom development services"
+        ]
+      }
+    },
+    "paymentFeatures": {
+      "sslEncryption": "SSL Encryption",
+      "pciCompliant": "PCI DSS Certified",
+      "instantArrival": "Instant Arrival"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "whatIsCredits": {
+        "title": "What is the credit system?",
+        "answer": "Credits are our billing units. Different AI models consume different credits. You can check usage details anytime."
+      },
+      "canCancel": {
+        "title": "Can I cancel anytime?",
+        "answer": "Yes, you can cancel your subscription anytime. Unused credits will be retained for the next cycle."
+      },
+      "enterpriseAdvantages": {
+        "title": "What are the advantages of Enterprise plan?",
+        "answer": "Enterprise plan provides dedicated servers, SLA guarantees, private deployment and other enterprise-grade features."
+      },
+      "supportInvoice": {
+        "title": "Do you support invoices?",
+        "answer": "Yes, we can provide official invoices and contract signing for enterprise users."
+      }
+    }
+  },
+  "models": {
+    "title": "15+ Mainstream AI Models",
+    "subtitle": "One-Click Integration",
+    "description": "From conversation to images, from audio to code, meet all your AI needs",
+    "viewAllModels": "View All Models",
+    "searchPlaceholder": "Search models or providers...",
+    "search": "Search models or providers...",
+    "noResults": "No matching models found",
+    "features": "Features",
+    "pricing": "Pricing",
+    "tryModel": "Try Model",
+    "viewDocs": "View Docs",
+    "sortOptions": {
+      "rating": "Sort by Rating",
+      "price": "Sort by Price",
+      "calls": "Sort by Calls"
+    },
+    "categories": {
+      "all": "All",
+      "chat": "Chat",
+      "image": "Image",
+      "audio": "Audio",
+      "code": "Code"
+    },
+    "category": {
+      "all": "All",
+      "chat": "Chat",
+      "image": "Image",
+      "audio": "Audio",
+      "code": "Code"
+    },
+    "sort": {
+      "rating": "Sort by Rating",
+      "price": "Sort by Price",
+      "calls": "Sort by Calls",
+      "name": "Sort by Name"
+    },
+    "status": {
+      "available": "Available",
+      "unavailable": "Unavailable",
+      "maintenance": "Maintenance",
+      "beta": "Beta"
+    },
+    "stats": {
+      "models": "AI Models",
+      "providers": "Service Providers",
+      "apiCalls": "API Calls",
+      "availability": "Availability"
+    },
+    "sampleModels": {
+      "gpt4Turbo": {
+        "description": "Latest generation large language model with multimodal input support",
+        "features": ["Multimodal", "128K Context", "Real-time Response"]
+      },
+      "claude3": {
+        "description": "Powerful reasoning capabilities with excellent safety",
+        "features": ["200K Context", "High Accuracy", "Safe Conversation"]
+      },
+      "dalle3": {
+        "description": "Most advanced AI image generation model",
+        "features": ["High Quality", "Precise Control", "Diverse Styles"]
+      },
+      "whisper": {
+        "description": "Multilingual speech recognition model",
+        "features": ["99 Languages", "High Precision", "Real-time Conversion"]
+      },
+      "codellama": {
+        "description": "Professional code generation and understanding model",
+        "features": ["Multi-language Support", "Code Completion", "Bug Fix"]
+      },
+      "geminiPro": {
+        "description": "Google's latest multimodal AI model",
+        "features": ["Multimodal", "Fast Response", "Context Understanding"]
+      },
+      "stableDiffusion": {
+        "description": "Open source image generation model with high quality output",
+        "features": ["Open Source", "Customizable", "High Resolution"]
+      },
+      "cohereCommand": {
+        "description": "Enterprise-grade large language model focused on business applications",
+        "features": ["Enterprise-grade", "Multilingual", "RAG Optimized"]
+      },
+      "azureSpeech": {
+        "description": "Enterprise-grade speech synthesis and recognition service",
+        "features": ["Neural Voice", "Custom Voice", "Real-time Translation"]
+      },
+      "githubCopilot": {
+        "description": "AI programming assistant to boost development efficiency",
+        "features": ["IDE Integration", "Multi-language", "Context Aware"]
+      }
+    },
+    "gpt4": {
+      "description": "Latest GPT-4 model with faster response speed and lower cost"
+    },
+    "claude": {
+      "description": "Most powerful Claude model, excellent at complex reasoning and creative writing"
+    },
+    "dalle": {
+      "description": "Latest image generation model that creates high-quality, high-precision images"
+    },
+    "whisper": {
+      "description": "Powerful speech recognition model supporting transcription and translation in multiple languages"
+    },
+    "codellama": {
+      "description": "Large language model designed specifically for code generation and understanding"
+    },
+    "sdxl": {
+      "description": "High-quality open-source image generation model supporting various artistic styles"
     }
   },
   "chat": {
@@ -78,347 +425,173 @@
     "aiReady": "AI Ready",
     "shiftEnter": "Shift + Enter for new line",
     "enterSend": "Enter to send",
-    "modelSwitched": "Switched to {model}, continue your conversation...",
-    "collapsesidebar": "Collapse Sidebar",
+    "clearHistory": "Clear History",
+    "exportChat": "Export Chat",
+    "settings": "Settings",
+    "systemPrompt": "System Prompt",
+    "temperature": "Creativity",
+    "maxTokens": "Max Tokens",
+    "model": "Model",
+    "cost": "Cost",
+    "tokens": "Tokens",
+    "time": "Time",
+    "copy": "Copy",
+    "regenerate": "Regenerate",
+    "feedback": "Feedback",
+    "like": "Like",
+    "dislike": "Dislike",
+    "share": "Share",
+    "error": "Error",
+    "retry": "Retry",
+    "networkError": "Network error, please try again later",
+    "modelError": "Model error, please switch model",
+    "quotaExceeded": "Quota exceeded, please recharge or upgrade plan",
+    "invalidInput": "Invalid input, please check input content",
+    "contextTooLong": "Conversation too long, please start new chat",
+    "apiCalls": "API Calls",
+    "totalCost": "Total Cost",
+    "avgResponseTime": "Average Response Time",
+    "successRate": "Success Rate",
+    "usageStats": "Usage Statistics",
+    "last30Days": "Last 30 Days",
+    "thisMonth": "This Month",
+    "lastMonth": "Last Month",
+    "modelUsage": "Model Usage",
+    "prompt": "Prompt",
+    "response": "Response",
+    "conversationStarted": "Conversation started at",
+    "conversationEnded": "Conversation ended at",
+    "messageCount": "Message Count",
+    "wordCount": "Word Count",
+    "averageResponseLength": "Average Response Length",
+    "mostUsedModel": "Most Used Model",
+    "favoriteTime": "Favorite Time",
+    "productivity": "Productivity Stats",
+    "efficiency": "Efficiency Metrics",
     "expandSidebar": "Expand Sidebar",
+    "collapseSidebar": "Collapse Sidebar",
+    "modelSwitched": "Switched to {model} model",
     "models": {
       "gpt4": {
         "name": "GPT-4 Turbo",
         "provider": "OpenAI",
-        "description": "Most advanced language model",
-        "speed": "Fast"
+        "speed": "Fast",
+        "description": "Most advanced language model"
       },
       "claude": {
         "name": "Claude 3 Opus",
         "provider": "Anthropic",
-        "description": "Excellent at analysis and reasoning",
-        "speed": "Medium"
+        "speed": "Medium",
+        "description": "Excellent at analysis and reasoning"
       },
       "gemini": {
         "name": "Gemini Pro",
         "provider": "Google",
-        "description": "Multimodal understanding capability",
-        "speed": "Fast"
+        "speed": "Fast",
+        "description": "Multimodal understanding capabilities"
       },
       "cohere": {
         "name": "Command",
         "provider": "Cohere",
-        "description": "Enterprise-grade language model",
-        "speed": "Fast"
+        "speed": "Fast",
+        "description": "Enterprise-grade language model"
       }
     }
-  },
-  "models": {
-    "title": "AI Models",
-    "subtitle": "Explore the various artificial intelligence models we offer",
-    "search": "Search models...",
-    "noResults": "No matching models found",
-    "category": {
-      "all": "All",
-      "chat": "Chat",
-      "image": "Image",
-      "audio": "Audio",
-      "code": "Code"
-    },
-    "sort": {
-      "rating": "Rating",
-      "price": "Price",
-      "calls": "Calls",
-      "name": "Name"
-    },
-    "status": {
-      "available": "Available",
-      "maintenance": "Maintenance",
-      "comingSoon": "Coming Soon"
-    },
-    "features": "Features",
-    "pricing": "Pricing",
-    "provider": "Provider",
-    "rating": "Rating",
-    "description": "Description",
-    "tryModel": "Try Model",
-    "viewDocs": "View Docs"
   },
   "account": {
     "title": "Account Management",
-    "subtitle": "Manage your personal information, security settings and subscriptions",
     "profile": "Profile",
     "security": "Security",
     "billing": "Billing",
-    "notifications": "Notifications",
-    "basicInfo": "Basic Information",
-    "name": "Name",
-    "email": "Email",
-    "phone": "Phone",
-    "joinDate": "Join Date",
-    "currentPlan": "Current Plan",
-    "usage": "Monthly Usage",
-    "tokens": "Token Usage",
-    "apiCalls": "API Calls",
-    "manageSubscription": "Manage Subscription",
-    "viewInvoices": "View Invoices",
-    "downloadInvoice": "Download Invoice",
-    "updatePayment": "Update Payment",
-    "cancelSubscription": "Cancel Subscription",
-    "saveChanges": "Save Changes",
-    "changePassword": "Change Password",
-    "twoFactorAuth": "Two-Factor Auth",
+    "usage": "Usage",
     "apiKeys": "API Keys",
-    "credits": {
-      "title": "Credits Information",
-      "current": "Current Credits",
-      "totalEarned": "Total Earned",
-      "totalSpent": "Total Spent",
-      "monthlyUsage": "Monthly Usage",
-      "viewDetails": "View Credit Usage Details",
-      "howToEarn": "How to earn credits?",
-      "dailyCheckin": "Daily check-in: 5-10 credits",
-      "referral": "Invite users: 100 credits/person",
-      "purchase": "Purchase plans: bonus credits included",
-      "activity": "Event rewards: distributed periodically",
-      "usage": {
-        "rule1": "1 credit = 1000 tokens quota",
-        "rule2": "Credits can be used to pay for API calls",
-        "rule3": "Credits expire 1 year after earned",
-        "rule4": "Credits are non-transferable and non-refundable"
-      }
-    }
-  },
-  "api": {
-    "title": "API Management",
-    "subtitle": "Manage your API keys, monitor usage and configure settings",
-    "keys": "API Keys",
-    "usage": "Usage Statistics",
-    "settings": "Configuration",
-    "docs": "API Documentation",
-    "createKey": "Create New Key",
-    "keyManagement": "API Key Management",
-    "createAndManage": "Create and manage your API access keys",
-    "keyName": "Key Name",
-    "permissions": "Permissions",
-    "lastUsed": "Last Used",
-    "created": "Created",
-    "regenerate": "Regenerate",
-    "revoke": "Revoke",
-    "copy": "Copy",
-    "rateLimit": "Rate Limit",
-    "quotaUsed": "Quota Used",
-    "requestCount": "Request Count",
-    "successRate": "Success Rate"
-  },
-  "pricing": {
-    "title": "Pricing Plans",
-    "subtitle": "Choose a subscription plan that fits your needs",
-    "monthly": "Monthly",
-    "annually": "Annually",
-    "savePercent": "Save {percent}%",
-    "currentPlan": "Current Plan",
-    "upgrade": "Upgrade Plan",
-    "downgrade": "Downgrade Plan",
-    "popular": "Most Popular",
-    "contactUs": "Contact Us",
-    "getStarted": "Get Started",
-    "plans": {
-      "free": {
-        "name": "Free",
-        "price": "0",
-        "period": "Forever Free",
-        "description": "Perfect for individuals to experience AI services",
-        "features": [
-          "20 daily GPT-3.5 conversations",
-          "5 daily image generations",
-          "Basic model access",
-          "Community support",
-          "Standard response speed"
-        ],
-        "limitations": ["No GPT-4 access", "No Claude 3 access", "No priority support", "Usage limitations"]
-      },
-      "pro": {
-        "name": "Pro",
-        "price": "29",
-        "period": "per month",
-        "description": "Perfect for professionals and small teams",
-        "features": [
-          "Unlimited GPT-4 Turbo conversations",
-          "Unlimited Claude 3 access",
-          "100 daily image generations",
-          "All model access",
-          "Priority response speed",
-          "Email support",
-          "API access",
-          "Data export"
-        ]
-      },
-      "team": {
-        "name": "Team",
-        "price": "99",
-        "period": "per month",
-        "description": "Perfect for small to medium teams",
-        "features": [
-          "All Pro features",
-          "Support for 10 team members",
-          "Team workspace",
-          "Shared conversation history",
-          "Team usage analytics",
-          "Priority technical support",
-          "Custom integrations",
-          "Advanced analytics"
-        ]
-      },
-      "enterprise": {
-        "name": "Enterprise",
-        "price": "Custom",
-        "period": "Contact sales",
-        "description": "Perfect for large enterprises and organizations",
-        "features": [
-          "All Team features",
-          "Unlimited team members",
-          "Dedicated account manager",
-          "SLA guarantee",
-          "Private deployment options",
-          "Advanced security controls",
-          "Custom development",
-          "24/7 technical support"
-        ]
-      }
+    "subscription": "Subscription",
+    "notifications": "Notifications",
+    "preferences": "Preferences",
+    "data": "Data Management",
+    "privacy": "Privacy Settings",
+    "deleteAccount": "Delete Account",
+    "personal": {
+      "avatar": "Avatar",
+      "username": "Username",
+      "email": "Email",
+      "phone": "Phone",
+      "birthday": "Birthday",
+      "gender": "Gender",
+      "location": "Location",
+      "bio": "Bio",
+      "website": "Website",
+      "company": "Company",
+      "jobTitle": "Job Title",
+      "industry": "Industry"
     },
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "items": [
-        {
-          "question": "Can I cancel my subscription anytime?",
-          "answer": "Yes, you can cancel your subscription at any time. You'll continue to have access until the end of your current billing period."
-        },
-        {
-          "question": "Do you offer annual billing?",
-          "answer": "Yes, annual billing is available with equivalent to 2 months free discount."
-        },
-        {
-          "question": "How do I upgrade or downgrade my plan?",
-          "answer": "You can change your plan anytime in account settings. Upgrades take effect immediately, downgrades take effect at next billing cycle."
-        }
-      ]
-    }
-  },
-  "news": {
-    "title": "AI News",
-    "subtitle": "Get the latest artificial intelligence industry news and technical insights",
-    "categories": {
-      "all": "All",
-      "technology": "Technology",
-      "industry": "Industry",
-      "research": "Research",
-      "product": "Product"
-    },
-    "tabs": {
-      "news": "Latest News",
-      "promotions": "Promotions"
-    },
-    "readMore": "Read More",
-    "publishedAt": "Published at",
-    "trending": "Trending Topics",
-    "featured": "Featured Articles",
-    "author": "Author",
-    "readTime": "Read Time",
-    "comments": "Comments",
-    "tags": "Tags",
-    "relatedArticles": "Related Articles",
-    "shareArticle": "Share Article",
-    "bookmarkArticle": "Bookmark Article",
-    "noArticles": "No articles available",
-    "loadingArticles": "Loading articles...",
-    "minutesRead": "{minutes} min read"
-  },
-  "auth": {
-    "login": {
-      "title": "Login to Account",
-      "subtitle": "Welcome back! Please login to your account",
-      "email": "Email address",
+    "securitySettings": {
       "password": "Password",
-      "rememberMe": "Remember me",
-      "forgotPassword": "Forgot password?",
-      "loginButton": "Login",
-      "noAccount": "Don't have an account?",
-      "signUp": "Sign up now",
-      "orContinueWith": "Or continue with",
-      "google": "Google",
-      "github": "GitHub"
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password",
+      "twoFactor": "Two-Factor Authentication",
+      "enable2FA": "Enable 2FA",
+      "disable2FA": "Disable 2FA",
+      "loginHistory": "Login History",
+      "activeDevices": "Active Devices",
+      "logoutAll": "Logout All Devices"
     },
-    "register": {
-      "title": "Create Account",
-      "subtitle": "Register for a free account and experience AI services immediately",
-      "name": "Full name",
-      "email": "Email address",
-      "password": "Password",
-      "confirmPassword": "Confirm password",
-      "agreeToTerms": "I agree to the",
-      "termsOfService": "Terms of Service",
-      "and": "and",
-      "privacyPolicy": "Privacy Policy",
-      "registerButton": "Create Account",
-      "hasAccount": "Already have an account?",
-      "signIn": "Sign in now"
+    "billingSettings": {
+      "currentPlan": "Current Plan",
+      "usage": "Usage",
+      "billing": "Billing",
+      "paymentMethod": "Payment Method",
+      "invoices": "Invoices",
+      "credits": "Credit Balance",
+      "upgrade": "Upgrade Plan",
+      "downgrade": "Downgrade Plan",
+      "cancel": "Cancel Subscription",
+      "renew": "Renew",
+      "history": "Usage History",
+      "refund": "Refund Request"
+    },
+    "apiKeySettings": {
+      "create": "Create Key",
+      "name": "Key Name",
+      "permissions": "Permissions",
+      "lastUsed": "Last Used",
+      "created": "Created",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "regenerate": "Regenerate",
+      "delete": "Delete Key",
+      "copyKey": "Copy Key",
+      "usage": "Usage",
+      "rateLimits": "Rate Limits"
     }
   },
   "footer": {
-    "company": {
-      "title": "Company",
-      "about": "About Us",
-      "careers": "Careers",
-      "contact": "Contact",
-      "blog": "Blog"
-    },
-    "products": {
-      "title": "Products",
-      "aiModels": "AI Models",
-      "apiService": "API Service",
-      "enterprise": "Enterprise Solutions"
-    },
-    "resources": {
-      "title": "Resources",
-      "documentation": "Documentation",
-      "guides": "Guides",
-      "community": "Community",
-      "support": "Support"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookies": "Cookie Policy"
-    },
-    "copyright": "© 2024 AI Platform. All rights reserved.",
-    "followUs": "Follow Us"
-  },
-  "demo": {
-    "badge": "Internationalization Demo",
-    "title": "Multi-Language Support",
-    "subtitle": "Experience our complete Chinese-English internationalization features, all interface elements support language switching",
-    "currentLang": "Current Language",
-    "features": {
-      "multiLanguage": {
-        "title": "Multi-Language Interface",
-        "desc": "Support for Chinese and English interfaces, covering all functional modules and user interaction elements"
-      },
-      "easySwitch": {
-        "title": "One-Click Switch",
-        "desc": "Through the top language switcher, you can easily switch between Chinese and English"
-      },
-      "persistent": {
-        "title": "Settings Saved",
-        "desc": "Language selection is automatically saved locally, maintaining your language preference on next visit"
-      }
-    },
-    "examples": {
-      "title": "Interface Element Examples",
-      "navigation": "Navigation Menu",
-      "chatInterface": "Chat Interface"
-    },
-    "cta": {
-      "title": "Experience Now",
-      "subtitle": "Switch languages to see the effect, explore our AI platform features",
-      "tryChat": "Try Chat",
-      "exploreModels": "Explore Models"
-    }
+    "description": "One-stop platform integrating 15+ mainstream AI models, providing powerful AI capabilities for developers and enterprises, making innovation within reach.",
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "documentation": "Documentation",
+    "community": "Community",
+    "company": "Company",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "careers": "Careers",
+    "press": "Press",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "support": "Support",
+    "help": "Help Center",
+    "status": "System Status",
+    "blog": "Blog",
+    "changelog": "Changelog",
+    "newsletter": "Newsletter",
+    "subscribe": "Subscribe",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved"
   }
 }

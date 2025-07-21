@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# AI Platform 安装脚本
-echo "🚀 开始安装 AI Platform..."
+# MetaPicker 安装脚本
+echo "🚀 开始安装 MetaPicker..."
 
 # 检查 Node.js 版本
 node_version=$(node -v 2>/dev/null | cut -d'v' -f2)
@@ -33,55 +33,26 @@ echo "✅ 依赖安装完成"
 
 # 检查环境变量文件
 if [ ! -f ".env.local" ]; then
-    if [ -f ".env.example" ]; then
-        echo "📋 创建环境变量文件..."
-        cp .env.example .env.local
-        echo "⚠️  请编辑 .env.local 文件并填入正确的环境变量"
-        echo "   包括数据库连接、API密钥等"
-    else
-        echo "❌ 未找到 .env.example 文件"
-        exit 1
-    fi
-fi
+    echo "📋 创建环境变量文件..."
+    cat > .env.local << EOF
+# NextAuth.js 配置
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_SECRET=your-secret-key-here
 
-# 数据库设置
-echo "🗄️  设置数据库..."
-npx prisma generate
+# Google OAuth (可选)
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
 
-if [ $? -ne 0 ]; then
-    echo "❌ Prisma 客户端生成失败"
-    exit 1
-fi
-
-echo "✅ 数据库客户端生成完成"
-
-# 检查数据库连接
-echo "🔍 检查数据库连接..."
-npx prisma db push
-
-if [ $? -ne 0 ]; then
-    echo "❌ 数据库连接失败，请检查 DATABASE_URL 配置"
-    echo "   确保 PostgreSQL 数据库正在运行并且连接信息正确"
-    exit 1
-fi
-
-echo "✅ 数据库连接成功"
-
-# 运行种子数据（可选）
-echo "🌱 是否要加载示例数据？(y/n)"
-read -r load_seed
-
-if [ "$load_seed" = "y" ] || [ "$load_seed" = "Y" ]; then
-    if [ -f "prisma/seed.ts" ]; then
-        npx prisma db seed
-        echo "✅ 示例数据加载完成"
-    else
-        echo "⚠️  未找到种子数据文件"
-    fi
+# GitHub OAuth (可选)
+GITHUB_ID=your-github-client-id
+GITHUB_SECRET=your-github-client-secret
+EOF
+    echo "⚠️  请编辑 .env.local 文件并填入正确的环境变量"
+    echo "   包括 NextAuth 密钥、OAuth 配置等"
 fi
 
 echo ""
-echo "🎉 AI Platform 安装完成！"
+echo "🎉 MetaPicker 安装完成！"
 echo ""
 echo "📝 下一步操作："
 echo "1. 编辑 .env.local 文件，填入正确的 API 密钥"

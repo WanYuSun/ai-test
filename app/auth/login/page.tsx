@@ -52,7 +52,7 @@ export default function LoginPage() {
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg">
               <Bot className="h-8 w-8 text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-900">AI Platform</span>
+            <span className="text-2xl font-bold text-gray-900">MetaPicker</span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900">欢迎回来</h2>
           <p className="mt-2 text-gray-600">登录您的账户以继续使用AI服务</p>

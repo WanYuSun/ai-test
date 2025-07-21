@@ -1,13 +1,17 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { Sparkles, Zap, Globe, Users, ArrowRight, Play, CheckCircle } from 'lucide-react'
+import { useI18n } from '@/lib/i18n/context'
+import { theme, cn } from '@/lib/theme/config'
+import { Button, Badge, Container } from '@/components/ui'
 
 export default function Hero() {
+  const { t } = useI18n()
   const [typedText, setTypedText] = useState('')
-  const fullText = '智能AI工具聚合平台'
+  const fullText = t('hero.title')
 
   useEffect(() => {
     let i = 0
@@ -21,27 +25,32 @@ export default function Hero() {
     }, 100)
 
     return () => clearInterval(timer)
-  }, [])
+  }, [fullText])
 
-  const features = ['15+ 主流AI模型', '30+ 服务商接入', '多模态支持', '实时对话']
+  const features = [
+    t('hero.features.multiModel'),
+    t('hero.features.serviceProviders'),
+    t('hero.features.multiModal'),
+    t('hero.features.realTimeChat'),
+  ]
 
   const stats = [
-    { label: '活跃用户', value: '10,000+', icon: Users },
-    { label: 'API调用', value: '1M+', icon: Zap },
-    { label: '支持模型', value: '15+', icon: Globe },
+    { label: t('hero.stats.activeUsers'), value: '10,000+', icon: Users },
+    { label: t('hero.stats.apiCalls'), value: '1M+', icon: Zap },
+    { label: t('hero.stats.supportedModels'), value: '15+', icon: Globe },
   ]
 
   return (
     <section className="relative overflow-hidden py-20 sm:py-28">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50" />
+      <div className={cn('absolute inset-0', `bg-gradient-to-br ${theme.gradients.hero}`)} />
       <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full max-w-6xl">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob" />
         <div className="absolute top-20 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000" />
         <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container size="lg" className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -54,22 +63,22 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center mb-6"
             >
-              <Sparkles className="w-4 h-4 mr-2" />
-              全新AI体验，现已上线
+              <Badge variant="primary" className="text-sm font-medium">
+                <Sparkles className="w-4 h-4 mr-2" />
+                {t('hero.badge')}
+              </Badge>
             </motion.div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className={cn('bg-clip-text text-transparent', `bg-gradient-to-r ${theme.gradients.primary}`)}>
                 {typedText}
               </span>
               <span className="animate-pulse">|</span>
             </h1>
 
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-              集成15+主流AI模型，提供统一API接口，支持多模态对话。 一站式AI解决方案，让您的创意无限可能。
-            </p>
+            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">{t('hero.subtitle')}</p>
 
             {/* Features List */}
             <div className="grid grid-cols-2 gap-3 mb-8">
@@ -94,19 +103,26 @@ export default function Hero() {
               transition={{ delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Link
-                href="/auth/register"
-                className="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl group"
-              >
-                <span>免费开始使用</span>
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <Link href="/auth/register">
+                <Button
+                  variant="primary"
+                  size="xl"
+                  rightIcon={<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
+                  className="group shadow-lg hover:shadow-xl"
+                >
+                  {t('hero.startFree')}
+                </Button>
               </Link>
-              <Link
-                href="/demo"
-                className="inline-flex items-center justify-center border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-200 group"
-              >
-                <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
-                <span>观看演示</span>
+
+              <Link href="/demo">
+                <Button
+                  variant="outline"
+                  size="xl"
+                  leftIcon={<Play className="w-5 h-5 group-hover:scale-110 transition-transform" />}
+                  className="group"
+                >
+                  {t('hero.watchDemo')}
+                </Button>
               </Link>
             </motion.div>
           </motion.div>
@@ -116,10 +132,10 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="relative"
+            className="relative z-10"
           >
             <div className="bg-white/60 backdrop-blur-lg rounded-2xl p-8 shadow-2xl border border-white/20">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">平台数据</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">{t('hero.platformData')}</h3>
               <div className="space-y-6">
                 {stats.map((stat, index) => (
                   <motion.div
@@ -130,7 +146,7 @@ export default function Hero() {
                     className="flex items-center justify-between p-4 bg-white/50 rounded-xl"
                   >
                     <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+                      <div className={cn('p-2', theme.borderRadius.lg, `bg-gradient-to-r ${theme.gradients.primary}`)}>
                         <stat.icon className="w-6 h-6 text-white" />
                       </div>
                       <span className="text-gray-700 font-medium">{stat.label}</span>
@@ -140,9 +156,17 @@ export default function Hero() {
                 ))}
               </div>
             </div>
+
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full opacity-60 animate-pulse"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-purple-100 rounded-full opacity-60 animate-pulse delay-1000"></div>
           </motion.div>
         </div>
-      </div>
+      </Container>
+
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-200 rounded-full opacity-10 blur-3xl"></div>
     </section>
   )
 }

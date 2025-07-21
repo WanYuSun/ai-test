@@ -91,7 +91,7 @@ export default function RegisterPage() {
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-3 rounded-lg">
                 <Bot className="h-8 w-8 text-white" />
               </div>
-              <span className="text-2xl font-bold text-gray-900">AI Platform</span>
+              <span className="text-2xl font-bold text-gray-900">MetaPicker</span>
             </Link>
             <h1 className="text-4xl font-bold text-gray-900 mb-4">开启您的AI之旅</h1>
             <p className="text-xl text-gray-600 mb-8">加入数万开发者和创业者的行列，体验最强大的AI工具集合平台</p>

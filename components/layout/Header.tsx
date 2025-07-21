@@ -6,6 +6,8 @@ import { usePathname } from 'next/navigation'
 import { useSession, signOut } from 'next-auth/react'
 import { Menu, X, User, LogOut, Settings, CreditCard, Bot, Sparkles, Key, UserCircle } from 'lucide-react'
 import { useI18n } from '@/lib/i18n/context'
+import { theme, cn } from '@/lib/theme/config'
+import { Button, Badge, Container } from '@/components/ui'
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher'
 
 export default function Header() {
@@ -16,13 +18,13 @@ export default function Header() {
   const { t } = useI18n()
 
   const navigation = [
-    { name: t('common.home'), href: '/' },
+    // { name: t('common.home'), href: '/' },
     { name: t('common.models'), href: '/models' },
     { name: t('common.chat'), href: '/chat' },
-    { name: t('common.account'), href: '/account' },
-    { name: t('common.apiManagement'), href: '/api-management' },
+    // { name: t('common.account'), href: '/account' },
+    // { name: t('common.apiManagement'), href: '/api-management' },
     { name: t('common.news'), href: '/news' },
-    { name: t('common.pricing'), href: '/pricing' },
+    // { name: t('common.pricing'), href: '/pricing' },
   ]
 
   // 检查当前路由是否匹配导航项
@@ -43,12 +45,12 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container className="py-0">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-2 rounded-lg">
+              <div className={cn('p-2', theme.borderRadius.lg, `bg-gradient-to-r ${theme.gradients.primary}`)}>
                 <Bot className="h-6 w-6 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-900">{t('header.title')}</span>
@@ -63,11 +65,14 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 relative ${
+                  className={cn(
+                    'px-3 py-2 text-sm font-medium relative',
+                    theme.borderRadius.md,
+                    theme.animations.transition,
                     isActive
                       ? 'text-blue-600 bg-blue-50 shadow-sm'
                       : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                  }`}
+                  )}
                 >
                   {item.name}
                   {isActive && (
@@ -87,7 +92,12 @@ export default function Header() {
               <div className="relative">
                 <button
                   onClick={() => setIsUserMenuOpen(!isUserMenuOpen)}
-                  className="flex items-center space-x-2 bg-gray-100 rounded-full px-3 py-2 text-sm hover:bg-gray-200 transition-colors"
+                  className={cn(
+                    'flex items-center space-x-2 bg-gray-100 px-3 py-2 text-sm',
+                    theme.borderRadius.full,
+                    theme.animations.transition,
+                    'hover:bg-gray-200'
+                  )}
                 >
                   <div className="w-6 h-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                     <User className="w-4 h-4 text-white" />
@@ -96,12 +106,20 @@ export default function Header() {
                 </button>
 
                 {isUserMenuOpen && (
-                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
-                    <Link
+                  <div
+                    className={cn(
+                      'absolute right-0 mt-2 w-56 bg-white py-1 z-50 border border-gray-200',
+                      theme.borderRadius.md,
+                      theme.shadows.lg
+                    )}
+                  >
+                    {/* <Link
                       href="/account"
-                      className={`flex items-center px-4 py-2 text-sm transition-colors ${
+                      className={cn(
+                        'flex items-center px-4 py-2 text-sm',
+                        theme.animations.transition,
                         isActivePath('/account') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-100'
-                      }`}
+                      )}
                       onClick={() => setIsUserMenuOpen(false)}
                     >
                       <UserCircle className="w-4 h-4 mr-3" />
@@ -109,19 +127,23 @@ export default function Header() {
                     </Link>
                     <Link
                       href="/api-management"
-                      className={`flex items-center px-4 py-2 text-sm transition-colors ${
+                      className={cn(
+                        'flex items-center px-4 py-2 text-sm',
+                        theme.animations.transition,
                         isActivePath('/api-management') ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-100'
-                      }`}
+                      )}
                       onClick={() => setIsUserMenuOpen(false)}
                     >
                       <Key className="w-4 h-4 mr-3" />
                       {t('common.apiManagement')}
-                    </Link>
+                    </Link> */}
                     <Link
                       href="/account?tab=billing"
-                      className={`flex items-center px-4 py-2 text-sm transition-colors ${
+                      className={cn(
+                        'flex items-center px-4 py-2 text-sm',
+                        theme.animations.transition,
                         isBillingTab() ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-100'
-                      }`}
+                      )}
                       onClick={() => setIsUserMenuOpen(false)}
                     >
                       <CreditCard className="w-4 h-4 mr-3" />
@@ -133,7 +155,11 @@ export default function Header() {
                         setIsUserMenuOpen(false)
                         signOut()
                       }}
-                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+                      className={cn(
+                        'flex items-center w-full px-4 py-2 text-sm text-gray-700',
+                        theme.animations.transition,
+                        'hover:bg-gray-100'
+                      )}
                     >
                       <LogOut className="w-4 h-4 mr-3" />
                       {t('common.logout')}
@@ -145,27 +171,36 @@ export default function Header() {
               <div className="flex items-center space-x-4">
                 <Link
                   href="/auth/login"
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium"
+                  className={cn(
+                    'text-gray-600 hover:text-gray-900 px-3 py-2 text-sm font-medium',
+                    theme.borderRadius.md,
+                    theme.animations.transition
+                  )}
                 >
                   {t('common.login')}
                 </Link>
-                <Link
-                  href="/auth/register"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center space-x-2"
-                >
-                  <Sparkles className="w-4 h-4" />
-                  <span>{t('common.register')}</span>
+                <Link href="/auth/register">
+                  <Button
+                    className={cn(
+                      'text-white px-4 py-2 text-sm font-medium',
+                      theme.borderRadius.lg,
+                      theme.animations.transition,
+                      `bg-gradient-to-r ${theme.gradients.primary} `
+                    )}
+                  >
+                    <div className="flex items-center space-x-2">
+                      <Sparkles className="w-4 h-4" />
+                      <span>{t('common.register')}</span>
+                    </div>
+                  </Button>
                 </Link>
               </div>
             )}
 
             {/* Mobile menu button */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
-            >
+            <Button variant="ghost" size="sm" onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -179,11 +214,14 @@ export default function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    className={cn(
+                      'block px-3 py-2 text-base font-medium',
+                      theme.borderRadius.md,
+                      theme.animations.transition,
                       isActive
                         ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                    }`}
+                    )}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -198,31 +236,42 @@ export default function Header() {
                     <div className="px-3 py-2 text-xs font-medium text-gray-500 uppercase tracking-wider">
                       {t('header.userMenu')}
                     </div>
-                    <Link
+                    {/* <Link
                       href="/account"
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      className={cn(
+                        'block px-3 py-2 text-base font-medium',
+                        theme.borderRadius.md,
+                        theme.animations.transition,
                         isActivePath('/account')
                           ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                      }`}
+                      )}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {t('header.accountManagement')}
                     </Link>
                     <Link
                       href="/api-management"
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                      className={cn(
+                        'block px-3 py-2 text-base font-medium',
+                        theme.borderRadius.md,
+                        theme.animations.transition,
                         isActivePath('/api-management')
                           ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600'
                           : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
-                      }`}
+                      )}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {t('common.apiManagement')}
-                    </Link>
+                    </Link> */}
                     <Link
                       href="/account?tab=billing"
-                      className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-50 transition-colors"
+                      className={cn(
+                        'text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium',
+                        theme.borderRadius.md,
+                        theme.animations.transition,
+                        'hover:bg-gray-50'
+                      )}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {t('header.subscriptionManagement')}
@@ -232,7 +281,12 @@ export default function Header() {
                         setIsMenuOpen(false)
                         signOut()
                       }}
-                      className="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium w-full text-left hover:bg-gray-50 transition-colors"
+                      className={cn(
+                        'text-gray-600 hover:text-gray-900 block px-3 py-2 text-base font-medium w-full text-left',
+                        theme.borderRadius.md,
+                        theme.animations.transition,
+                        'hover:bg-gray-50'
+                      )}
                     >
                       {t('common.logout')}
                     </button>
@@ -242,7 +296,7 @@ export default function Header() {
             </div>
           </div>
         )}
-      </div>
+      </Container>
     </header>
   )
 }

@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Star, Zap, Users, DollarSign, Filter, Search } from 'lucide-react'
+import Link from 'next/link'
+import { useI18n } from '@/lib/i18n/context'
+import { theme, cn } from '@/lib/theme/config'
+import { Button, Badge, Container, Section } from '@/components/ui'
 
 interface AIModel {
   id: string
@@ -18,16 +22,17 @@ interface AIModel {
 }
 
 export default function ModelShowcase() {
+  const { t, locale } = useI18n()
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [sortBy, setSortBy] = useState('rating')
   const [searchTerm, setSearchTerm] = useState('')
 
   const categories = [
-    { id: 'all', name: '全部' },
-    { id: 'chat', name: '对话' },
-    { id: 'image', name: '图像' },
-    { id: 'audio', name: '音频' },
-    { id: 'code', name: '代码' },
+    { id: 'all', name: t('models.categories.all') },
+    { id: 'chat', name: t('models.categories.chat') },
+    { id: 'image', name: t('models.categories.image') },
+    { id: 'audio', name: t('models.categories.audio') },
+    { id: 'code', name: t('models.categories.code') },
   ]
 
   const models: AIModel[] = [
@@ -35,122 +40,141 @@ export default function ModelShowcase() {
       id: '1',
       name: 'GPT-4 Turbo',
       provider: 'OpenAI',
-      description: '最新一代大语言模型，支持多模态输入',
+      description: t('models.sampleModels.gpt4Turbo.description'),
       category: 'chat',
       rating: 4.9,
       price: 0.01,
       calls: 1250000,
-      features: ['多模态', '128K上下文', '实时响应'],
+      features:
+        locale === 'zh' ? ['多模态', '128K上下文', '实时响应'] : ['Multimodal', '128K Context', 'Real-time Response'],
       logo: '/api/placeholder/40/40',
     },
     {
       id: '2',
       name: 'Claude 3 Opus',
       provider: 'Anthropic',
-      description: '强大的推理能力，安全性优秀',
+      description: t('models.sampleModels.claude3.description'),
       category: 'chat',
       rating: 4.8,
       price: 0.015,
       calls: 980000,
-      features: ['200K上下文', '高准确性', '安全对话'],
+      features:
+        locale === 'zh'
+          ? ['200K上下文', '高准确性', '安全对话']
+          : ['200K Context', 'High Accuracy', 'Safe Conversation'],
       logo: '/api/placeholder/40/40',
     },
     {
       id: '3',
       name: 'DALL-E 3',
       provider: 'OpenAI',
-      description: '最先进的AI图像生成模型',
+      description: t('models.sampleModels.dalle3.description'),
       category: 'image',
       rating: 4.7,
       price: 0.04,
       calls: 560000,
-      features: ['高质量', '精确控制', '风格多样'],
+      features:
+        locale === 'zh' ? ['高质量', '精确控制', '风格多样'] : ['High Quality', 'Precise Control', 'Diverse Styles'],
       logo: '/api/placeholder/40/40',
     },
     {
       id: '4',
       name: 'Whisper Large',
       provider: 'OpenAI',
-      description: '多语言语音识别模型',
+      description: t('models.sampleModels.whisper.description'),
       category: 'audio',
       rating: 4.6,
       price: 0.006,
       calls: 340000,
-      features: ['99种语言', '高精度', '实时转换'],
+      features:
+        locale === 'zh'
+          ? ['99种语言', '高精度', '实时转换']
+          : ['99 Languages', 'High Precision', 'Real-time Conversion'],
       logo: '/api/placeholder/40/40',
     },
     {
       id: '5',
       name: 'CodeLlama',
       provider: 'Meta',
-      description: '专业的代码生成和理解模型',
+      description: t('models.sampleModels.codellama.description'),
       category: 'code',
       rating: 4.5,
       price: 0.008,
       calls: 280000,
-      features: ['多语言支持', '代码补全', 'bug修复'],
+      features:
+        locale === 'zh'
+          ? ['多语言支持', '代码补全', 'bug修复']
+          : ['Multi-language Support', 'Code Completion', 'Bug Fix'],
       logo: '/api/placeholder/40/40',
     },
     {
       id: '6',
       name: 'Gemini Pro',
       provider: 'Google',
-      description: 'Google最新多模态AI模型',
+      description: t('models.sampleModels.geminiPro.description'),
       category: 'chat',
       rating: 4.7,
       price: 0.012,
       calls: 450000,
-      features: ['多模态', '快速响应', '上下文理解'],
+      features:
+        locale === 'zh'
+          ? ['多模态', '快速响应', '上下文理解']
+          : ['Multimodal', 'Fast Response', 'Context Understanding'],
       logo: '/api/placeholder/40/40',
     },
-    {
-      id: '7',
-      name: 'Stable Diffusion XL',
-      provider: 'Stability AI',
-      description: '开源图像生成模型，高质量输出',
-      category: 'image',
-      rating: 4.4,
-      price: 0.025,
-      calls: 420000,
-      features: ['开源', '可定制', '高分辨率'],
-      logo: '/api/placeholder/40/40',
-    },
-    {
-      id: '8',
-      name: 'Cohere Command',
-      provider: 'Cohere',
-      description: '企业级大语言模型，专注商业应用',
-      category: 'chat',
-      rating: 4.3,
-      price: 0.02,
-      calls: 180000,
-      features: ['企业级', '多语言', 'RAG优化'],
-      logo: '/api/placeholder/40/40',
-    },
-    {
-      id: '9',
-      name: 'Azure Speech',
-      provider: 'Microsoft',
-      description: '企业级语音合成和识别服务',
-      category: 'audio',
-      rating: 4.2,
-      price: 0.004,
-      calls: 310000,
-      features: ['神经语音', '自定义声音', '实时翻译'],
-      logo: '/api/placeholder/40/40',
-    },
-    {
-      id: '10',
-      name: 'GitHub Copilot',
-      provider: 'GitHub',
-      description: 'AI编程助手，提升开发效率',
-      category: 'code',
-      rating: 4.6,
-      price: 0.01,
-      calls: 890000,
-      features: ['IDE集成', '多语言', '上下文感知'],
-      logo: '/api/placeholder/40/40',
-    },
+    // {
+    //   id: '7',
+    //   name: 'Stable Diffusion XL',
+    //   provider: 'Stability AI',
+    //   description: t('models.sampleModels.stableDiffusion.description'),
+    //   category: 'image',
+    //   rating: 4.4,
+    //   price: 0.025,
+    //   calls: 420000,
+    //   features: locale === 'zh' ? ['开源', '可定制', '高分辨率'] : ['Open Source', 'Customizable', 'High Resolution'],
+    //   logo: '/api/placeholder/40/40',
+    // },
+    // {
+    //   id: '8',
+    //   name: 'Cohere Command',
+    //   provider: 'Cohere',
+    //   description: t('models.sampleModels.cohereCommand.description'),
+    //   category: 'chat',
+    //   rating: 4.3,
+    //   price: 0.02,
+    //   calls: 180000,
+    //   features:
+    //     locale === 'zh' ? ['企业级', '多语言', 'RAG优化'] : ['Enterprise-grade', 'Multilingual', 'RAG Optimized'],
+    //   logo: '/api/placeholder/40/40',
+    // },
+    // {
+    //   id: '9',
+    //   name: 'Azure Speech',
+    //   provider: 'Microsoft',
+    //   description: t('models.sampleModels.azureSpeech.description'),
+    //   category: 'audio',
+    //   rating: 4.2,
+    //   price: 0.004,
+    //   calls: 310000,
+    //   features:
+    //     locale === 'zh'
+    //       ? ['神经语音', '自定义声音', '实时翻译']
+    //       : ['Neural Voice', 'Custom Voice', 'Real-time Translation'],
+    //   logo: '/api/placeholder/40/40',
+    // },
+    // {
+    //   id: '10',
+    //   name: 'GitHub Copilot',
+    //   provider: 'GitHub',
+    //   description: t('models.sampleModels.githubCopilot.description'),
+    //   category: 'code',
+    //   rating: 4.6,
+    //   price: 0.01,
+    //   calls: 890000,
+    //   features:
+    //     locale === 'zh' ? ['IDE集成', '多语言', '上下文感知'] : ['IDE Integration', 'Multi-language', 'Context Aware'],
+    //   logo: '/api/placeholder/40/40',
+    // },
   ]
 
   const filteredModels = models
@@ -184,61 +208,13 @@ export default function ModelShowcase() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              15+ 主流AI模型
+            <span className={cn('bg-clip-text text-transparent', `bg-gradient-to-r ${theme.gradients.primary}`)}>
+              {t('models.title')}
             </span>
-            一键接入
+            {t('models.subtitle')}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">从对话到图像，从音频到代码，满足您的所有AI需求</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('models.description')}</p>
         </motion.div>
-
-        {/* 筛选和搜索栏 */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
-          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
-            {/* 搜索框 */}
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-              <input
-                type="text"
-                placeholder="搜索模型或服务商..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-
-            {/* 分类筛选 */}
-            <div className="flex gap-2 flex-wrap">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
-                >
-                  {category.name}
-                </button>
-              ))}
-            </div>
-
-            {/* 排序选择 */}
-            <div className="flex items-center gap-2">
-              <Filter className="w-5 h-5 text-gray-400" />
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500"
-              >
-                <option value="rating">按评分排序</option>
-                <option value="price">按价格排序</option>
-                <option value="calls">按调用量排序</option>
-              </select>
-            </div>
-          </div>
-        </div>
 
         {/* 模型列表 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -253,7 +229,13 @@ export default function ModelShowcase() {
             >
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                  <div
+                    className={cn(
+                      'w-12 h-12 flex items-center justify-center text-white font-bold text-lg',
+                      theme.borderRadius.lg,
+                      `bg-gradient-to-r ${theme.gradients.primary}`
+                    )}
+                  >
                     {model.name.charAt(0)}
                   </div>
                   <div>
@@ -288,9 +270,9 @@ export default function ModelShowcase() {
                     <span>{(model.calls / 1000).toFixed(0)}K</span>
                   </div>
                 </div>
-                <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
-                  试用
-                </button>
+                <Button variant="primary" size="sm">
+                  {t('common.tryNow')}
+                </Button>
               </div>
             </motion.div>
           ))}
@@ -307,19 +289,19 @@ export default function ModelShowcase() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="text-3xl font-bold text-blue-600 mb-2">15+</div>
-              <div className="text-gray-600">AI模型</div>
+              <div className="text-gray-600">{t('models.stats.models')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-green-600 mb-2">30+</div>
-              <div className="text-gray-600">服务商</div>
+              <div className="text-gray-600">{t('models.stats.providers')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-600 mb-2">5M+</div>
-              <div className="text-gray-600">API调用</div>
+              <div className="text-gray-600">{t('models.stats.apiCalls')}</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-600 mb-2">99.9%</div>
-              <div className="text-gray-600">可用性</div>
+              <div className="text-gray-600">{t('models.stats.availability')}</div>
             </div>
           </div>
         </motion.div>
@@ -333,7 +315,7 @@ export default function ModelShowcase() {
           className="text-center mt-12"
         >
           <button className="bg-white border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 hover:bg-gray-50 transition-all duration-200">
-            查看全部模型
+            {t('models.viewAllModels')}
           </button>
         </motion.div>
       </div>

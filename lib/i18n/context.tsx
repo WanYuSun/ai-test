@@ -10,6 +10,7 @@ interface I18nContextType {
   locale: Locale
   setLocale: (locale: Locale) => void
   t: (key: string, params?: Record<string, string>) => string
+  tArray: (key: string) => string[]
 }
 
 const I18nContext = createContext<I18nContextType | undefined>(undefined)
@@ -64,7 +65,31 @@ export function I18nProvider({ children }: { children: React.ReactNode }) {
     return value
   }
 
-  return <I18nContext.Provider value={{ locale, setLocale: handleSetLocale, t }}>{children}</I18nContext.Provider>
+  // 数组翻译函数
+  const tArray = (key: string): string[] => {
+    const keys = key.split('.')
+    let value: any = messages[locale]
+
+    for (const k of keys) {
+      if (value && typeof value === 'object' && k in value) {
+        value = value[k]
+      } else {
+        // 如果找不到翻译，返回空数组
+        return []
+      }
+    }
+
+    if (Array.isArray(value)) {
+      return value
+    }
+
+    // 如果不是数组，返回空数组
+    return []
+  }
+
+  return (
+    <I18nContext.Provider value={{ locale, setLocale: handleSetLocale, t, tArray }}>{children}</I18nContext.Provider>
+  )
 }
 
 export function useI18n() {

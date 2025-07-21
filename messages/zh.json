@@ -28,27 +28,111 @@
     "next": "下一步",
     "previous": "上一步",
     "retry": "重试",
-    "refresh": "刷新"
+    "refresh": "刷新",
+    "viewAll": "查看全部",
+    "viewMore": "查看更多",
+    "placeholder": "占位符",
+    "waitingToLoad": "等待加载...",
+    "imageLoadFailed": "图片加载失败",
+    "hot": "热门",
+    "tryNow": "试用",
+    "participateNow": "立即参与",
+    "readMore": "阅读更多",
+    "limitedTime": "限时优惠",
+    "validUntil": "截止",
+    "startNow": "立即开始",
+    "selectPlan": "选择方案",
+    "comingSoon": "即将上线",
+    "all": "全部",
+    "image": "图像",
+    "audio": "音频",
+    "code": "代码"
   },
   "header": {
-    "title": "AI Platform",
+    "title": "MetaPicker",
     "accountManagement": "账户管理",
     "subscriptionManagement": "订阅管理",
     "userMenu": "用户菜单"
   },
   "hero": {
-    "title": "下一代AI平台",
-    "subtitle": "集成全球领先的AI模型，为您提供强大的人工智能服务",
-    "startFree": "免费开始",
-    "learnMore": "了解更多",
-    "trustedBy": "受到以下公司信赖"
+    "badge": "全新AI体验，现已上线",
+    "title": "智能AI工具聚合平台",
+    "subtitle": "集成15+主流AI模型，提供统一API接口，支持多模态对话。一站式AI解决方案，让您的创意无限可能。",
+    "startFree": "免费开始使用",
+    "watchDemo": "观看演示",
+    "platformData": "平台数据",
+    "features": {
+      "multiModel": "15+ 主流AI模型",
+      "serviceProviders": "30+ 服务商接入",
+      "multiModal": "多模态支持",
+      "realTimeChat": "实时对话"
+    },
+    "stats": {
+      "activeUsers": "活跃用户",
+      "apiCalls": "API调用",
+      "supportedModels": "支持模型"
+    }
   },
   "features": {
     "title": "强大功能",
+    "oneStopTitle": "一站集成",
+    "aiCapabilities": "多种AI能力",
     "subtitle": "为开发者和企业打造的完整AI解决方案",
+    "description": "我们整合了市面上最优秀的AI模型和服务，通过统一的API接口为您提供强大的AI能力，让您专注于创新而非基础设施",
+    "readyToExperience": "准备好体验AI的强大能力了吗？",
+    "freeTrialDescription": "立即注册获得100积分免费体验，无需信用卡，无隐藏费用",
+    "moreFeatures": "更多强大功能",
+    "moreFeaturesDescription": "除了核心的AI模型集成，我们还提供了丰富的辅助功能，帮助您构建完整的AI应用",
+    "checkApiDocs": "查看API文档",
     "multiModel": {
-      "title": "多模型支持",
-      "desc": "集成GPT-4、Claude、Gemini等主流AI模型"
+      "title": "多种AI模型",
+      "desc": "集成GPT-4、Claude、Gemini等15+主流AI模型，满足不同场景需求"
+    },
+    "fastResponse": {
+      "title": "极速响应",
+      "desc": "优化的API路由和智能负载均衡，确保毫秒级响应速度"
+    },
+    "secure": {
+      "title": "安全可靠",
+      "desc": "企业级安全防护，数据加密传输，符合GDPR等合规要求"
+    },
+    "unifiedApi": {
+      "title": "统一API",
+      "desc": "一套API接口，支持所有模型，简化开发流程和维护成本"
+    },
+    "multiModal": {
+      "title": "多模态支持",
+      "desc": "支持文本、图像、语音等多种输入输出格式"
+    },
+    "smartChat": {
+      "title": "智能对话",
+      "desc": "支持上下文记忆的多轮对话，提供更自然的交互体验"
+    },
+    "highlights": {
+      "voiceRecognition": {
+        "title": "语音识别",
+        "desc": "支持多语言语音转文字，准确率高达99%"
+      },
+      "imageGeneration": {
+        "title": "图像生成",
+        "desc": "从文本生成高质量图像，支持多种风格"
+      },
+      "globalDeployment": {
+        "title": "全球部署",
+        "desc": "多地区节点部署，确保全球用户低延迟访问"
+      },
+      "dataAnalysis": {
+        "title": "数据分析",
+        "desc": "详细的使用统计和成本分析，助力业务决策"
+      },
+      "teamCollaboration": {
+        "title": "团队协作",
+        "desc": "支持多用户管理和权限控制，便于团队协作"
+      },
+      "privacyProtection": {
+        "title": "隐私保护",
+        "desc": "严格的数据隐私保护，用户数据完全可控"
+      }
     },
     "easyIntegration": {
       "title": "简单集成",
@@ -56,63 +140,184 @@
     },
     "scalable": {
       "title": "弹性扩展",
-      "desc": "支持从个人到企业级的不同规模需求"
-    },
-    "secure": {
-      "title": "安全可靠",
-      "desc": "企业级安全保障，数据隐私全面保护"
+      "desc": "支持从个人到企业级不同规模需求"
     }
   },
-  "chat": {
-    "title": "AI 对话",
-    "newChat": "新建对话",
-    "selectModel": "选择模型",
-    "chatHistory": "聊天记录",
-    "inputPlaceholder": "输入您的问题...",
-    "send": "发送",
-    "attachment": "附件",
-    "image": "图片",
-    "voice": "语音",
-    "online": "在线",
-    "responding": "响应中",
-    "aiReady": "AI 已就绪",
-    "shiftEnter": "Shift + Enter 换行",
-    "enterSend": "Enter 发送",
-    "modelSwitched": "已切换到 {model}，继续您的对话...",
-    "collapsesidebar": "收起侧边栏",
-    "expandSidebar": "展开侧边栏",
-    "models": {
-      "gpt4": {
-        "name": "GPT-4 Turbo",
-        "provider": "OpenAI",
-        "description": "最先进的语言模型",
-        "speed": "快速"
+  "news": {
+    "title": "AI行业",
+    "highlight": "最新资讯",
+    "subtitle": "第一时间了解AI技术动态、产品更新和行业趋势",
+    "featured": "特色文章",
+    "latest": "最新资讯",
+    "searchPlaceholder": "搜索资讯或标签...",
+    "noResults": "未找到相关资讯",
+    "tryDifferentSearch": "请尝试不同的搜索关键词",
+    "readMore": "阅读更多",
+    "loadMore": "加载更多资讯",
+    "categories": {
+      "all": "全部",
+      "product": "产品更新",
+      "tech": "技术评测",
+      "industry": "行业分析",
+      "company": "新品发布"
+    },
+    "author": {
+      "editorial": "MetaPicker 编辑部",
+      "tech": "技术团队",
+      "analyst": "行业分析师"
+    },
+    "tabs": {
+      "news": "行业资讯",
+      "promotions": "优惠活动"
+    },
+    "sampleNews": {
+      "gpt4Turbo": {
+        "title": "OpenAI发布GPT-4 Turbo，性能提升50%，价格降低3倍",
+        "summary": "OpenAI在最新的开发者大会上宣布GPT-4 Turbo正式发布，新模型在保持高质量输出的同时大幅降低了使用成本..."
       },
-      "claude": {
-        "name": "Claude 3 Opus",
-        "provider": "Anthropic",
-        "description": "擅长分析和推理",
-        "speed": "中等"
+      "geminiPro": {
+        "title": "Google Gemini Pro在多模态理解上超越GPT-4V",
+        "summary": "最新的评测显示，Google的Gemini Pro在图像理解、文档分析等多模态任务上表现出色..."
       },
-      "gemini": {
-        "name": "Gemini Pro",
-        "provider": "Google",
-        "description": "多模态理解能力",
-        "speed": "快速"
+      "claude3": {
+        "title": "Anthropic Claude 3系列模型全面上线，安全性再升级",
+        "summary": "Anthropic正式发布Claude 3系列，包括Haiku、Sonnet和Opus三个版本，在安全性和有用性上都有显著提升..."
       },
-      "cohere": {
-        "name": "Command",
-        "provider": "Cohere",
-        "description": "企业级语言模型",
-        "speed": "快速"
+      "aiTrends": {
+        "title": "2024年AI行业趋势预测：多模态、边缘计算成为重点",
+        "summary": "业内专家预测，2024年AI行业将更加注重多模态融合和边缘计算部署，成本效率将成为关键因素..."
+      }
+    },
+    "samplePromotions": {
+      "openaiOffer": {
+        "title": "OpenAI新年特惠",
+        "description": "GPT-4 Turbo限时8折优惠，额外赠送1000积分",
+        "discount": "8折 + 1000积分"
+      },
+      "anthropicTrial": {
+        "title": "Anthropic企业版免费试用",
+        "description": "Claude 3企业版免费试用30天，包含所有高级功能",
+        "discount": "30天免费"
+      },
+      "googleStudent": {
+        "title": "Google Cloud AI学生优惠",
+        "description": "学生用户享受Gemini Pro 5折优惠，需提供学生证明",
+        "discount": "5折优惠"
+      }
+    }
+  },
+  "pricing": {
+    "title": "选择适合您的",
+    "highlight": "定价方案",
+    "subtitle": "灵活的积分制收费，按需使用，无隐藏费用。支持多种支付方式，随时升级或降级。",
+    "popular": "最受欢迎",
+    "paymentMethods": "支持的支付方式",
+    "paymentSecurity": "安全可靠的支付保障",
+    "includes": "包含",
+    "credits": "积分",
+    "plans": {
+      "free": {
+        "name": "免费版",
+        "period": "永久免费",
+        "description": "适合个人开发者体验",
+        "features": ["100 积分/月", "基础AI模型访问", "社区支持", "标准API限制", "基础使用统计"],
+        "limitations": ["不支持高级模型", "响应速度较慢", "无优先支持"]
+      },
+      "basic": {
+        "name": "基础版",
+        "period": "月",
+        "description": "适合小团队和初创公司",
+        "features": [
+          "1,000 积分/月",
+          "所有AI模型访问",
+          "优先响应速度",
+          "邮件支持",
+          "详细使用统计",
+          "API密钥管理",
+          "基础集成文档"
+        ]
+      },
+      "pro": {
+        "name": "专业版",
+        "period": "月",
+        "description": "适合成长中的企业",
+        "features": [
+          "5,000 积分/月",
+          "所有AI模型访问",
+          "最高优先级响应",
+          "24/7 技术支持",
+          "高级数据分析",
+          "团队协作功能",
+          "自定义集成",
+          "白标解决方案"
+        ]
+      },
+      "enterprise": {
+        "name": "企业版",
+        "period": "月",
+        "description": "适合大型企业和机构",
+        "features": [
+          "20,000 积分/月",
+          "所有AI模型访问",
+          "专属服务器",
+          "专属客户经理",
+          "企业级安全",
+          "SLA保障",
+          "SSO单点登录",
+          "私有部署选项",
+          "定制开发服务"
+        ]
+      }
+    },
+    "paymentFeatures": {
+      "sslEncryption": "SSL加密",
+      "pciCompliant": "PCI DSS认证",
+      "instantArrival": "即时到账"
+    },
+    "faq": {
+      "title": "常见问题",
+      "whatIsCredits": {
+        "title": "什么是积分制？",
+        "answer": "积分是我们的计费单位，不同AI模型消耗不同积分。您可以随时查看消费明细。"
+      },
+      "canCancel": {
+        "title": "可以随时取消吗？",
+        "answer": "是的，您可以随时取消订阅，未使用的积分会保留到下个周期。"
+      },
+      "enterpriseAdvantages": {
+        "title": "企业版有什么优势？",
+        "answer": "企业版提供专属服务器、SLA保障、私有部署等企业级功能。"
+      },
+      "supportInvoice": {
+        "title": "支持发票吗？",
+        "answer": "支持，我们可以为企业用户提供正规发票和合同签署。"
       }
     }
   },
   "models": {
-    "title": "AI 模型",
-    "subtitle": "探索我们提供的各种人工智能模型",
-    "search": "搜索模型...",
+    "title": "15+ 主流AI模型",
+    "subtitle": "一键接入",
+    "description": "从对话到图像，从音频到代码，满足您的所有AI需求",
+    "viewAllModels": "查看全部模型",
+    "searchPlaceholder": "搜索模型或服务商...",
+    "search": "搜索模型或服务商...",
     "noResults": "未找到匹配的模型",
+    "features": "功能特性",
+    "pricing": "定价",
+    "tryModel": "试用模型",
+    "viewDocs": "查看文档",
+    "sortOptions": {
+      "rating": "按评分排序",
+      "price": "按价格排序",
+      "calls": "按调用量排序"
+    },
+    "categories": {
+      "all": "全部",
+      "chat": "对话",
+      "image": "图像",
+      "audio": "音频",
+      "code": "代码"
+    },
     "category": {
       "all": "全部",
       "chat": "对话",
@@ -121,298 +326,266 @@
       "code": "代码"
     },
     "sort": {
-      "rating": "评分",
-      "price": "价格",
-      "calls": "调用量",
-      "name": "名称"
+      "rating": "按评分排序",
+      "price": "按价格排序",
+      "calls": "按调用量排序",
+      "name": "按名称排序"
     },
     "status": {
       "available": "可用",
+      "unavailable": "不可用",
       "maintenance": "维护中",
-      "comingSoon": "即将推出"
+      "beta": "测试版"
     },
-    "features": "功能特性",
-    "pricing": "定价",
-    "provider": "提供商",
-    "rating": "评分",
-    "description": "描述",
-    "tryModel": "试用模型",
-    "viewDocs": "查看文档"
+    "stats": {
+      "models": "AI模型",
+      "providers": "服务商",
+      "apiCalls": "API调用",
+      "availability": "可用性"
+    },
+    "sampleModels": {
+      "gpt4Turbo": {
+        "description": "最新一代大语言模型，支持多模态输入",
+        "features": ["多模态", "128K上下文", "实时响应"]
+      },
+      "claude3": {
+        "description": "强大的推理能力，安全性优秀",
+        "features": ["200K上下文", "高准确性", "安全对话"]
+      },
+      "dalle3": {
+        "description": "最先进的AI图像生成模型",
+        "features": ["高质量", "精确控制", "风格多样"]
+      },
+      "whisper": {
+        "description": "多语言语音识别模型",
+        "features": ["99种语言", "高精度", "实时转换"]
+      },
+      "codellama": {
+        "description": "专业的代码生成和理解模型",
+        "features": ["多语言支持", "代码补全", "bug修复"]
+      },
+      "geminiPro": {
+        "description": "Google最新多模态AI模型",
+        "features": ["多模态", "快速响应", "上下文理解"]
+      },
+      "stableDiffusion": {
+        "description": "开源图像生成模型，高质量输出",
+        "features": ["开源", "可定制", "高分辨率"]
+      },
+      "cohereCommand": {
+        "description": "企业级大语言模型，专注商业应用",
+        "features": ["企业级", "多语言", "RAG优化"]
+      },
+      "azureSpeech": {
+        "description": "企业级语音合成和识别服务",
+        "features": ["神经语音", "自定义声音", "实时翻译"]
+      },
+      "githubCopilot": {
+        "description": "AI编程助手，提升开发效率",
+        "features": ["IDE集成", "多语言", "上下文感知"]
+      }
+    },
+    "gpt4": {
+      "description": "最新的GPT-4模型，具有更快的响应速度和更低的成本"
+    },
+    "claude": {
+      "description": "最强大的Claude模型，擅长复杂推理和创意写作"
+    },
+    "dalle": {
+      "description": "最新的图像生成模型，能生成高质量、高精度的图像"
+    },
+    "whisper": {
+      "description": "强大的语音识别模型，支持多种语言的转录和翻译"
+    },
+    "codellama": {
+      "description": "专为代码生成和理解设计的大型语言模型"
+    },
+    "sdxl": {
+      "description": "高质量的开源图像生成模型，支持多种艺术风格"
+    }
+  },
+  "chat": {
+    "title": "AI 对话",
+    "newChat": "新建对话",
+    "selectModel": "选择模型",
+    "chatHistory": "对话历史",
+    "inputPlaceholder": "输入您的问题...",
+    "send": "发送",
+    "attachment": "附件",
+    "image": "图片",
+    "voice": "语音",
+    "online": "在线",
+    "responding": "响应中",
+    "aiReady": "AI 就绪",
+    "shiftEnter": "Shift + Enter 换行",
+    "enterSend": "Enter 发送",
+    "clearHistory": "清空历史",
+    "exportChat": "导出对话",
+    "settings": "设置",
+    "systemPrompt": "系统提示",
+    "temperature": "创造性",
+    "maxTokens": "最大字符数",
+    "model": "模型",
+    "cost": "消费",
+    "tokens": "字符数",
+    "time": "时间",
+    "copy": "复制",
+    "regenerate": "重新生成",
+    "feedback": "反馈",
+    "like": "赞",
+    "dislike": "踩",
+    "share": "分享",
+    "error": "错误",
+    "retry": "重试",
+    "networkError": "网络错误，请稍后重试",
+    "modelError": "模型错误，请更换模型",
+    "quotaExceeded": "配额已用完，请充值或升级套餐",
+    "invalidInput": "输入无效，请检查输入内容",
+    "contextTooLong": "对话过长，请开始新对话",
+    "apiCalls": "API调用次数",
+    "totalCost": "总消费",
+    "avgResponseTime": "平均响应时间",
+    "successRate": "成功率",
+    "usageStats": "使用统计",
+    "last30Days": "最近30天",
+    "thisMonth": "本月",
+    "lastMonth": "上月",
+    "modelUsage": "模型使用情况",
+    "prompt": "提示词",
+    "response": "回复",
+    "conversationStarted": "对话开始于",
+    "conversationEnded": "对话结束于",
+    "messageCount": "消息数量",
+    "wordCount": "字数统计",
+    "averageResponseLength": "平均回复长度",
+    "mostUsedModel": "最常用模型",
+    "favoriteTime": "偏好时段",
+    "productivity": "生产力统计",
+    "efficiency": "效率指标",
+    "expandSidebar": "展开侧边栏",
+    "collapseSidebar": "收起侧边栏",
+    "modelSwitched": "已切换到 {model} 模型",
+    "models": {
+      "gpt4": {
+        "name": "GPT-4 Turbo",
+        "provider": "OpenAI",
+        "speed": "快速",
+        "description": "最先进的语言模型"
+      },
+      "claude": {
+        "name": "Claude 3 Opus",
+        "provider": "Anthropic",
+        "speed": "中等",
+        "description": "擅长分析和推理"
+      },
+      "gemini": {
+        "name": "Gemini Pro",
+        "provider": "Google",
+        "speed": "快速",
+        "description": "多模态理解能力"
+      },
+      "cohere": {
+        "name": "Command",
+        "provider": "Cohere",
+        "speed": "快速",
+        "description": "企业级语言模型"
+      }
+    }
   },
   "account": {
-    "title": "账户管理",
-    "subtitle": "管理您的个人信息、安全设置和订阅",
+    "title": "账号管理",
     "profile": "个人信息",
     "security": "安全设置",
-    "billing": "订阅管理",
+    "billing": "账单管理",
+    "usage": "使用情况",
+    "apiKeys": "API 密钥",
+    "subscription": "订阅管理",
     "notifications": "通知设置",
-    "basicInfo": "基本信息",
-    "name": "姓名",
-    "email": "邮箱",
-    "phone": "手机号",
-    "joinDate": "注册时间",
-    "currentPlan": "当前计划",
-    "usage": "本月使用情况",
-    "tokens": "Token使用量",
-    "apiCalls": "API调用次数",
-    "manageSubscription": "管理订阅",
-    "viewInvoices": "查看账单",
-    "downloadInvoice": "下载账单",
-    "updatePayment": "更新付款方式",
-    "cancelSubscription": "取消订阅",
-    "saveChanges": "保存更改",
-    "changePassword": "修改密码",
-    "twoFactorAuth": "双重认证",
-    "apiKeys": "API密钥",
-    "credits": {
-      "title": "积分信息",
-      "current": "当前积分",
-      "totalEarned": "累计获得",
-      "totalSpent": "累计消费",
-      "monthlyUsage": "本月消费",
-      "viewDetails": "查看积分使用明细",
-      "howToEarn": "如何获取积分？",
-      "dailyCheckin": "每日签到：5-10积分",
-      "referral": "邀请用户：100积分/人",
-      "purchase": "购买套餐：赠送相应积分",
-      "activity": "活动奖励：不定期发放",
-      "usage": {
-        "rule1": "1积分 = 1000 tokens 额度",
-        "rule2": "积分可用于支付API调用费用",
-        "rule3": "积分有效期为获得后1年",
-        "rule4": "积分不可转让或提现"
-      }
-    }
-  },
-  "api": {
-    "title": "API管理",
-    "subtitle": "管理您的API密钥、监控使用情况和配置设置",
-    "keys": "API密钥",
-    "usage": "使用统计",
-    "settings": "配置设置",
-    "docs": "API文档",
-    "createKey": "创建新密钥",
-    "keyManagement": "API密钥管理",
-    "createAndManage": "创建和管理您的API访问密钥",
-    "keyName": "密钥名称",
-    "permissions": "权限",
-    "lastUsed": "最后使用",
-    "created": "创建时间",
-    "regenerate": "重新生成",
-    "revoke": "撤销",
-    "copy": "复制",
-    "rateLimit": "速率限制",
-    "quotaUsed": "配额使用",
-    "requestCount": "请求次数",
-    "successRate": "成功率"
-  },
-  "pricing": {
-    "title": "定价方案",
-    "subtitle": "选择适合您需求的订阅计划",
-    "monthly": "月付",
-    "annually": "年付",
-    "savePercent": "节省 {percent}%",
-    "currentPlan": "当前套餐",
-    "upgrade": "升级套餐",
-    "downgrade": "降级套餐",
-    "popular": "最受欢迎",
-    "contactUs": "联系我们",
-    "getStarted": "立即开始",
-    "plans": {
-      "free": {
-        "name": "免费版",
-        "price": "0",
-        "period": "永久免费",
-        "description": "适合个人用户体验AI服务",
-        "features": ["每日20次GPT-3.5对话", "每日5次图像生成", "基础模型访问", "社区支持", "标准响应速度"],
-        "limitations": ["不支持GPT-4", "不支持Claude 3", "无优先支持", "有使用限制"]
-      },
-      "pro": {
-        "name": "专业版",
-        "price": "29",
-        "period": "每月",
-        "description": "适合专业用户和小团队",
-        "features": [
-          "无限制GPT-4 Turbo对话",
-          "无限制Claude 3访问",
-          "每日100次图像生成",
-          "所有模型访问权限",
-          "优先响应速度",
-          "邮件支持",
-          "API访问权限",
-          "数据导出功能"
-        ]
-      },
-      "team": {
-        "name": "团队版",
-        "price": "99",
-        "period": "每月",
-        "description": "适合中小型团队协作",
-        "features": [
-          "专业版所有功能",
-          "支持10个团队成员",
-          "团队工作空间",
-          "共享对话历史",
-          "团队使用统计",
-          "优先技术支持",
-          "自定义集成",
-          "高级分析报告"
-        ]
-      },
-      "enterprise": {
-        "name": "企业版",
-        "price": "定制",
-        "period": "联系销售",
-        "description": "适合大型企业和组织",
-        "features": [
-          "团队版所有功能",
-          "无限团队成员",
-          "专属客户经理",
-          "SLA保障",
-          "私有部署选项",
-          "高级安全控制",
-          "定制化开发",
-          "24/7技术支持"
-        ]
-      }
+    "preferences": "偏好设置",
+    "data": "数据管理",
+    "privacy": "隐私设置",
+    "deleteAccount": "删除账号",
+    "personal": {
+      "avatar": "头像",
+      "username": "用户名",
+      "email": "邮箱",
+      "phone": "手机号",
+      "birthday": "生日",
+      "gender": "性别",
+      "location": "所在地",
+      "bio": "个人简介",
+      "website": "个人网站",
+      "company": "公司",
+      "jobTitle": "职位",
+      "industry": "行业"
     },
-    "faq": {
-      "title": "常见问题",
-      "items": [
-        {
-          "question": "可以随时取消订阅吗？",
-          "answer": "是的，您可以随时取消订阅。取消后您仍可使用服务直到当前计费周期结束。"
-        },
-        {
-          "question": "是否支持按年付费？",
-          "answer": "支持。按年付费可享受相当于2个月免费的优惠。"
-        },
-        {
-          "question": "如何升级或降级套餐？",
-          "answer": "您可以在账户设置中随时更改套餐。升级立即生效，降级在下个计费周期生效。"
-        }
-      ]
-    }
-  },
-  "news": {
-    "title": "AI 资讯",
-    "subtitle": "获取最新的人工智能行业动态和技术资讯",
-    "categories": {
-      "all": "全部",
-      "technology": "技术",
-      "industry": "行业",
-      "research": "研究",
-      "product": "产品"
-    },
-    "tabs": {
-      "news": "最新资讯",
-      "promotions": "优惠活动"
-    },
-    "readMore": "阅读更多",
-    "publishedAt": "发布于",
-    "trending": "热门话题",
-    "featured": "精选文章",
-    "author": "作者",
-    "readTime": "阅读时间",
-    "comments": "评论",
-    "tags": "标签",
-    "relatedArticles": "相关文章",
-    "shareArticle": "分享文章",
-    "bookmarkArticle": "收藏文章",
-    "noArticles": "暂无文章",
-    "loadingArticles": "加载文章中...",
-    "minutesRead": "{minutes}分钟阅读"
-  },
-  "auth": {
-    "login": {
-      "title": "登录账户",
-      "subtitle": "欢迎回来！请登录您的账户",
-      "email": "邮箱地址",
+    "securitySettings": {
       "password": "密码",
-      "rememberMe": "记住我",
-      "forgotPassword": "忘记密码？",
-      "loginButton": "登录",
-      "noAccount": "还没有账户？",
-      "signUp": "立即注册",
-      "orContinueWith": "或继续使用",
-      "google": "Google",
-      "github": "GitHub"
-    },
-    "register": {
-      "title": "创建账户",
-      "subtitle": "注册免费账户，立即体验AI服务",
-      "name": "姓名",
-      "email": "邮箱地址",
-      "password": "密码",
+      "changePassword": "修改密码",
+      "currentPassword": "当前密码",
+      "newPassword": "新密码",
       "confirmPassword": "确认密码",
-      "agreeToTerms": "我同意",
-      "termsOfService": "服务条款",
-      "and": "和",
-      "privacyPolicy": "隐私政策",
-      "registerButton": "注册账户",
-      "hasAccount": "已有账户？",
-      "signIn": "立即登录"
+      "twoFactor": "两步验证",
+      "enable2FA": "启用两步验证",
+      "disable2FA": "关闭两步验证",
+      "loginHistory": "登录历史",
+      "activeDevices": "活跃设备",
+      "logoutAll": "退出所有设备"
+    },
+    "billingSettings": {
+      "currentPlan": "当前套餐",
+      "usage": "使用量",
+      "billing": "账单",
+      "paymentMethod": "支付方式",
+      "invoices": "发票",
+      "credits": "积分余额",
+      "upgrade": "升级套餐",
+      "downgrade": "降级套餐",
+      "cancel": "取消订阅",
+      "renew": "续费",
+      "history": "消费历史",
+      "refund": "退款申请"
+    },
+    "apiKeySettings": {
+      "create": "创建密钥",
+      "name": "密钥名称",
+      "permissions": "权限",
+      "lastUsed": "最后使用",
+      "created": "创建时间",
+      "status": "状态",
+      "active": "活跃",
+      "inactive": "未活跃",
+      "regenerate": "重新生成",
+      "delete": "删除密钥",
+      "copyKey": "复制密钥",
+      "usage": "使用情况",
+      "rateLimits": "速率限制"
     }
   },
   "footer": {
-    "company": {
-      "title": "公司",
-      "about": "关于我们",
-      "careers": "招聘",
-      "contact": "联系我们",
-      "blog": "博客"
-    },
-    "products": {
-      "title": "产品",
-      "aiModels": "AI模型",
-      "apiService": "API服务",
-      "enterprise": "企业解决方案"
-    },
-    "resources": {
-      "title": "资源",
-      "documentation": "文档",
-      "guides": "指南",
-      "community": "社区",
-      "support": "支持"
-    },
-    "legal": {
-      "title": "法律",
-      "privacy": "隐私政策",
-      "terms": "服务条款",
-      "cookies": "Cookie政策"
-    },
-    "copyright": "© 2024 AI Platform. 保留所有权利。",
-    "followUs": "关注我们"
-  },
-  "demo": {
-    "badge": "国际化演示",
-    "title": "多语言支持",
-    "subtitle": "体验我们完整的中英文国际化功能，所有界面元素都支持语言切换",
-    "currentLang": "当前语言",
-    "features": {
-      "multiLanguage": {
-        "title": "多语言界面",
-        "desc": "支持中文和英文界面，覆盖所有功能模块和用户交互元素"
-      },
-      "easySwitch": {
-        "title": "一键切换",
-        "desc": "通过顶部语言切换器，可以轻松在中英文之间进行切换"
-      },
-      "persistent": {
-        "title": "设置保存",
-        "desc": "语言选择会自动保存到本地，下次访问时保持您的语言偏好"
-      }
-    },
-    "examples": {
-      "title": "界面元素示例",
-      "navigation": "导航菜单",
-      "chatInterface": "聊天界面"
-    },
-    "cta": {
-      "title": "立即体验",
-      "subtitle": "切换语言查看效果，探索我们的AI平台功能",
-      "tryChat": "体验对话",
-      "exploreModels": "浏览模型"
-    }
+    "description": "集成15+主流AI模型的一站式平台，为开发者和企业提供强大的AI能力，让创新触手可及。",
+    "product": "产品",
+    "features": "功能特性",
+    "pricing": "定价方案",
+    "documentation": "文档",
+    "community": "社区",
+    "company": "公司",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "careers": "招聘",
+    "press": "媒体",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "cookies": "Cookie 政策",
+    "support": "支持",
+    "help": "帮助中心",
+    "status": "系统状态",
+    "blog": "博客",
+    "changelog": "更新日志",
+    "newsletter": "订阅邮件",
+    "subscribe": "订阅",
+    "followUs": "关注我们",
+    "allRightsReserved": "保留所有权利"
   }
 }

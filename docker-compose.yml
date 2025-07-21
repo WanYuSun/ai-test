@@ -4,7 +4,7 @@ services:
   # PostgreSQL 数据库
   postgres:
     image: postgres:15-alpine
-    container_name: ai-platform-db
+    container_name: MetaPicker-db
     environment:
       POSTGRES_DB: ai_platform
       POSTGRES_USER: postgres
@@ -22,7 +22,7 @@ services:
   # Redis 缓存 (可选)
   redis:
     image: redis:7-alpine
-    container_name: ai-platform-redis
+    container_name: MetaPicker-redis
     ports:
       - '6379:6379'
     volumes:
@@ -33,12 +33,12 @@ services:
       timeout: 5s
       retries: 5
 
-  # AI Platform 应用
+  # MetaPicker 应用
   app:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: ai-platform-app
+    container_name: MetaPicker-app
     ports:
       - '3000:3000'
     environment:

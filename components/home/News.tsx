@@ -4,6 +4,9 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Calendar, User, Tag, ArrowRight, TrendingUp, MessageSquare } from 'lucide-react'
 import Link from 'next/link'
+import { useI18n } from '@/lib/i18n/context'
+import { theme, cn } from '@/lib/theme/config'
+import { Button, Badge, Container, Section } from '@/components/ui'
 
 interface NewsItem {
   id: string
@@ -29,54 +32,55 @@ interface Promotion {
 }
 
 export default function News() {
+  const { t, locale } = useI18n()
   const [activeTab, setActiveTab] = useState<'news' | 'promotions'>('news')
 
   const newsItems: NewsItem[] = [
     {
       id: '1',
-      title: 'OpenAI发布GPT-4 Turbo，性能提升50%，价格降低3倍',
-      summary: 'OpenAI在最新的开发者大会上宣布GPT-4 Turbo正式发布，新模型在保持高质量输出的同时大幅降低了使用成本...',
-      category: '产品更新',
-      author: 'AI Platform 编辑部',
+      title: t('news.sampleNews.gpt4Turbo.title'),
+      summary: t('news.sampleNews.gpt4Turbo.summary'),
+      category: t('news.categories.product'),
+      author: t('news.author.editorial'),
       publishedAt: '2024-01-15',
       imageUrl: '/api/placeholder/400/240',
-      tags: ['OpenAI', 'GPT-4', '价格优化'],
+      tags: locale === 'zh' ? ['OpenAI', 'GPT-4', '价格优化'] : ['OpenAI', 'GPT-4', 'Price Optimization'],
       commentCount: 156,
       featured: true,
     },
     {
       id: '2',
-      title: 'Google Gemini Pro在多模态理解上超越GPT-4V',
-      summary: '最新的评测显示，Google的Gemini Pro在图像理解、文档分析等多模态任务上表现出色...',
-      category: '技术评测',
-      author: '技术团队',
+      title: t('news.sampleNews.geminiPro.title'),
+      summary: t('news.sampleNews.geminiPro.summary'),
+      category: t('news.categories.tech'),
+      author: t('news.author.tech'),
       publishedAt: '2024-01-14',
       imageUrl: '/api/placeholder/400/240',
-      tags: ['Google', 'Gemini', '多模态'],
+      tags: locale === 'zh' ? ['Google', 'Gemini', '多模态'] : ['Google', 'Gemini', 'Multimodal'],
       commentCount: 89,
       featured: false,
     },
     {
       id: '3',
-      title: 'Anthropic Claude 3系列模型全面上线，安全性再升级',
-      summary: 'Anthropic正式发布Claude 3系列，包括Haiku、Sonnet和Opus三个版本，在安全性和有用性上都有显著提升...',
-      category: '新品发布',
-      author: 'AI Platform 编辑部',
+      title: t('news.sampleNews.claude3.title'),
+      summary: t('news.sampleNews.claude3.summary'),
+      category: t('news.categories.company'),
+      author: t('news.author.editorial'),
       publishedAt: '2024-01-13',
       imageUrl: '/api/placeholder/400/240',
-      tags: ['Anthropic', 'Claude', '安全性'],
+      tags: locale === 'zh' ? ['Anthropic', 'Claude', '安全性'] : ['Anthropic', 'Claude', 'Safety'],
       commentCount: 72,
       featured: false,
     },
     {
       id: '4',
-      title: '2024年AI行业趋势预测：多模态、边缘计算成为重点',
-      summary: '业内专家预测，2024年AI行业将更加注重多模态融合和边缘计算部署，成本效率将成为关键因素...',
-      category: '行业分析',
-      author: '行业分析师',
+      title: t('news.sampleNews.aiTrends.title'),
+      summary: t('news.sampleNews.aiTrends.summary'),
+      category: t('news.categories.industry'),
+      author: t('news.author.analyst'),
       publishedAt: '2024-01-12',
       imageUrl: '/api/placeholder/400/240',
-      tags: ['趋势预测', '多模态', '边缘计算'],
+      tags: locale === 'zh' ? ['趋势预测', '多模态', '边缘计算'] : ['Trend Prediction', 'Multimodal', 'Edge Computing'],
       commentCount: 134,
       featured: true,
     },
@@ -85,28 +89,28 @@ export default function News() {
   const promotions: Promotion[] = [
     {
       id: '1',
-      title: 'OpenAI新年特惠',
-      description: 'GPT-4 Turbo限时8折优惠，额外赠送1000积分',
+      title: t('news.samplePromotions.openaiOffer.title'),
+      description: t('news.samplePromotions.openaiOffer.description'),
       provider: 'OpenAI',
-      discount: '8折 + 1000积分',
+      discount: t('news.samplePromotions.openaiOffer.discount'),
       validTo: '2024-02-29',
       link: '/promotions/openai-new-year',
     },
     {
       id: '2',
-      title: 'Anthropic企业版免费试用',
-      description: 'Claude 3企业版免费试用30天，包含所有高级功能',
+      title: t('news.samplePromotions.anthropicTrial.title'),
+      description: t('news.samplePromotions.anthropicTrial.description'),
       provider: 'Anthropic',
-      discount: '30天免费',
+      discount: t('news.samplePromotions.anthropicTrial.discount'),
       validTo: '2024-03-15',
       link: '/promotions/anthropic-enterprise',
     },
     {
       id: '3',
-      title: 'Google Cloud AI学生优惠',
-      description: '学生用户享受Gemini Pro 5折优惠，需提供学生证明',
+      title: t('news.samplePromotions.googleStudent.title'),
+      description: t('news.samplePromotions.googleStudent.description'),
       provider: 'Google',
-      discount: '5折优惠',
+      discount: t('news.samplePromotions.googleStudent.discount'),
       validTo: '2024-06-30',
       link: '/promotions/google-student',
     },
@@ -123,10 +127,12 @@ export default function News() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            AI行业{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">最新资讯</span>
+            {t('news.title')}{' '}
+            <span className={cn('bg-clip-text text-transparent', `bg-gradient-to-r ${theme.gradients.primary}`)}>
+              {t('news.highlight')}
+            </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">第一时间了解AI技术动态、产品更新和行业趋势</p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('news.subtitle')}</p>
         </motion.div>
 
         {/* 标签页切换 */}
@@ -138,7 +144,7 @@ export default function News() {
                 activeTab === 'news' ? 'bg-blue-600 text-white shadow-sm' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              行业资讯
+              {t('news.tabs.news')}
             </button>
             <button
               onClick={() => setActiveTab('promotions')}
@@ -146,7 +152,7 @@ export default function News() {
                 activeTab === 'promotions' ? 'bg-blue-600 text-white shadow-sm' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
-              优惠活动
+              {t('news.tabs.promotions')}
             </button>
           </div>
         </div>
@@ -169,12 +175,14 @@ export default function News() {
                   >
                     <div className="md:flex">
                       <div className="md:w-1/3">
-                        <div className="h-48 md:h-full bg-gradient-to-r from-blue-500 to-purple-500 relative">
+                        <div className={cn('h-48 md:h-full relative', `bg-gradient-to-r ${theme.gradients.primary}`)}>
                           <div className="absolute inset-0 flex items-center justify-center">
                             <TrendingUp className="w-12 h-12 text-white" />
                           </div>
                           <div className="absolute top-4 left-4">
-                            <span className="bg-red-500 text-white px-2 py-1 rounded text-sm font-medium">热门</span>
+                            <Badge variant="error" className="bg-red-500 text-white">
+                              {t('common.hot')}
+                            </Badge>
                           </div>
                         </div>
                       </div>
@@ -207,7 +215,7 @@ export default function News() {
                             </div>
                           </div>
                           <button className="text-blue-600 hover:text-blue-700 font-medium flex items-center space-x-1">
-                            <span>阅读更多</span>
+                            <span>{t('common.readMore')}</span>
                             <ArrowRight className="w-4 h-4" />
                           </button>
                         </div>
@@ -274,16 +282,18 @@ export default function News() {
                   <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                     {promotion.provider}
                   </span>
-                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">限时优惠</span>
+                  <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">{t('common.limitedTime')}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{promotion.title}</h3>
                 <p className="text-gray-600 mb-4">{promotion.description}</p>
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-green-600">{promotion.discount}</div>
-                  <div className="text-sm text-gray-500">截止: {promotion.validTo}</div>
+                  <div className="text-sm text-gray-500">
+                    {t('common.validUntil')}: {promotion.validTo}
+                  </div>
                 </div>
                 <button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200">
-                  立即参与
+                  {t('common.participateNow')}
                 </button>
               </motion.div>
             ))}
@@ -299,9 +309,10 @@ export default function News() {
           className="text-center mt-12"
         >
           <Link href="/news">
-            <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg">
-              查看更多{activeTab === 'news' ? '资讯' : '活动'}
-            </button>
+            <Button variant="primary" size="lg" className="shadow-lg">
+              {t('common.viewMore')}
+              {activeTab === 'news' ? t('common.news') : t('news.tabs.promotions')}
+            </Button>
           </Link>
         </motion.div>
       </div>
