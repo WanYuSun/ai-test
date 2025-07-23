@@ -46,7 +46,8 @@
     "all": "全部",
     "image": "图像",
     "audio": "音频",
-    "code": "代码"
+    "code": "代码",
+    "icons": "图标库"
   },
   "header": {
     "title": "MetaPicker",

@@ -46,7 +46,8 @@
     "all": "All",
     "image": "Image",
     "audio": "Audio",
-    "code": "Code"
+    "code": "Code",
+    "icons": "Icons"
   },
   "header": {
     "title": "MetaPicker",
