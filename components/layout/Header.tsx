@@ -21,6 +21,7 @@ export default function Header() {
     // { name: t('common.home'), href: '/' },
     { name: t('common.models'), href: '/models' },
     { name: t('common.chat'), href: '/chat' },
+    { name: t('common.icons'), href: '/icon-libraries' },
     // { name: t('common.account'), href: '/account' },
     // { name: t('common.apiManagement'), href: '/api-management' },
     { name: t('common.news'), href: '/news' },
