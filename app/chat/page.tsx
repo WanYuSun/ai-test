@@ -586,8 +586,8 @@ export default function ChatPage() {
                                 : 'bg-white border border-gray-200/50'
                             }`}
                           >
-                            <div className="prose prose-sm max-w-none">
-                              <div className="whitespace-pre-wrap leading-relaxed">{message.content}</div>
+                            <div className="text-sm leading-relaxed">
+                              <div className="whitespace-pre-wrap">{message.content}</div>
                             </div>
 
                             {/* Message Actions */}

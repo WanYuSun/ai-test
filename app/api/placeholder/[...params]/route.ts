@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 
-export async function GET(request: NextRequest, { params }: { params: { params: string[] } }) {
+export async function GET(request: NextRequest, { params }: { params: Promise<{ params: string[] }> }) {
   try {
-    const [width = '400', height = '240'] = params.params || []
+    const resolvedParams = await params
+    const [width = '400', height = '240'] = resolvedParams.params || []
     const searchParams = request.nextUrl.searchParams
     const customText = searchParams.get('text')
 
